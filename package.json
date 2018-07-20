@@ -1,0 +1,13 @@
+{
+	"name": "grunt-polymer-build-serve",
+	"version": "0.0.1",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"merge-stream": "^1.0.1",
+		"node-fetch": "^2.1.2",
+		"polymer-build": "^3.0.4",
+		"polyserve": "^0.27.12",
+		"superstatic": "^5.0.2",
+		"vinyl-fs": "^3.0.3"
+	}
+}
