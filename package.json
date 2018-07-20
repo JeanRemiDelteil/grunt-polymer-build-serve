@@ -1,6 +1,9 @@
 {
 	"name": "grunt-polymer-build-serve",
 	"version": "0.1.0",
+	"engines": {
+		"node": ">=8.11.3"
+	},
 	"license": "Apache-2.0",
 	"main": "tasks/main.js",
 	"dependencies": {

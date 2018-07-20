@@ -170,10 +170,17 @@ function polyBuild(projectConfig) {
  *
  * @property {string} name
  * @property {boolean | *} bundle
+ * 
  * @property {{}} js
- * @property {boolean || 'es5'} js.compile
+ * @property {boolean | 'es5' | 'es2015'} [js.compile]
+ * @property {boolean} [js.minify]
+ * @property {boolean} [js.transformModulesToAmd]
+ * 
  * @property {{}} html
+ * @property {boolean} [html.minify]
  * @property {{}} css
+ * @property {boolean} [css.minify]
+ * 
  * @property {boolean} insertPrefetchLinks
  * @property {string} basePath
  * @property {boolean} addPushManifest
