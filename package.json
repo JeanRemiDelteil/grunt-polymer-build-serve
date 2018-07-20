@@ -4,6 +4,7 @@
 	"engines": {
 		"node": ">=8.11.3"
 	},
+	"repository": "https://github.com/JeanRemiDelteil/grunt-polymer-build-serve.git",
 	"license": "Apache-2.0",
 	"main": "tasks/main.js",
 	"dependencies": {
