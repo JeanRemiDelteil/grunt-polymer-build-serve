@@ -1,7 +1,8 @@
 {
 	"name": "grunt-polymer-build-serve",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"license": "Apache-2.0",
+	"main": "tasks/main.js",
 	"dependencies": {
 		"merge-stream": "^1.0.1",
 		"node-fetch": "^2.1.2",

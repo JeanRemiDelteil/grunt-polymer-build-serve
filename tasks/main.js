@@ -31,7 +31,7 @@ function registerGruntTasks(grunt) {
 	 * Register the polyServe task
 	 */
 	grunt.registerMultiTask('polyServe', 'run a dev serve, serving es6 app and/or firebase app', function () {
-		const startServer = require('./server/firePolyServe').start;
+		const startServer = require('../src/server/firePolyServe').start;
 		const config = this.data;
 		const done = this.async();
 		
@@ -48,7 +48,7 @@ function registerGruntTasks(grunt) {
 		/**
 		 * @type {polyBuild}
 		 */
-		const polyBuild = require('./buildProcess/polybuild');
+		const polyBuild = require('../src/buildProcess/polybuild');
 		const config = this.data;
 		const done = this.async();
 		
@@ -63,6 +63,6 @@ function registerGruntTasks(grunt) {
 module.exports = _isGruntProcess()
 	? registerGruntTasks
 	: {
-		polyServe: require('./server/firePolyServe'),
-		polyBuild: require('./buildProcess/polybuild'),
+		polyServe: require('../src/server/firePolyServe'),
+		polyBuild: require('../src/buildProcess/polybuild'),
 	};
