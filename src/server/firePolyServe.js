@@ -63,9 +63,20 @@ function getProvider(port) {
 	 */
 	return function provider(req, pathName) {
 		// noinspection JSUnresolvedFunction
-		return fetch(`http://localhost:${port}${pathName}`)
+		return fetch(`http://localhost:${port}${pathName}`, {
+			headers: {
+				// avoid compilation, (CLI option 'never' does not work)
+				'User-Agent': 'Chrome/69.0.3497.100',
+			}
+		})
 			.then(res => res.buffer())
 			.then(buffer => {
+				
+				// Check content for file not found
+				const content = buffer.toString();
+				if (/^(ENOENT|ENOTDIR|EISDIR)/.test(content)) return null;
+				
+				
 				return {
 					// A readable stream for the content
 					stream: new StreamBuffer(buffer),
